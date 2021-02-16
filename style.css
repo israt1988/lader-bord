@@ -1,0 +1,59 @@
+/*5th--full web side reset korer jonno eta korer por top player r img er majhe kono gap thakbe na ti top-players class a margin-top dai*/
+*{
+margin: 0;
+padding: 0;
+}
+/*4th-- main tag er vitor sobkichu ache.main tag ta ke alade dekhanor jonno width fixt kore dilam*/
+main{
+    width: 1200px;
+    max-width: 90%;              /*2--max/min width bole deya jai*/
+     margin: 0 auto;             /*3--horizental center a anerjonno*/
+}
+/*1st */
+.top-players, .blogs{           /*top-player class ta k box akare dekher jonno *//*10-- blogs same styl */
+display: grid;
+/*grid-template-columns: repeat(3, 1fr);            /*img column hisabe dekher jonnp*/
+grid-gap: 50px;                                 /*2 ta img er majhe fhaka rakher jonno*/
+margin-top: 40px;                                /*5-2 work top player o img er majhe spaceer jonno*/  
+place-items: center;                            /*last work 688px holhe center a chole asbe*/
+}
+/*3rd--img er pase name anar jonno flax*/
+.player, .blog{                               /*8--same style blogs a o hobe ti eksathe*/
+    display: flex;
+    align-items: center;                           /*vertically img+text center a aner jonno*/
+     }
+.top-players {
+    grid-template-columns: repeat(3, 1fr);            /*img column hisabe dekher jonnp*/  
+}
+/*7th--work*/
+.blogs{
+    grid-template-columns: repeat(2, 1fr);            /*9th kaj eta*/
+}
+/* 2nd--img size choto korer jonno (img player class er vitor ache)*/
+.player img {
+    height: 50px;
+    margin-right: 20px;                            /*img r name er majhe space korer jonno*/
+  }
+  /* blogs er img size thik korer jonno*/
+  .thumbnail img{
+    height: 100px;
+    margin-right: 20px;  
+  }
+  /*6th---web side responcsive korer kaj*/
+  @media (max-width:992px){
+    .top-players {                                   /*top-player class a column +/- korbe tai...*/
+        grid-template-columns: repeat(2, 1fr);      /*max width 992 hole 2 row hobe*/
+  }
+  .blogs {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width:688px){
+    .top-players {                                   /*top-player class a column +/- korbe tai...*/
+        grid-template-columns: repeat(1, 1fr);      /*max width 688 hole 1 row hobe*/
+  } 
+  .blog{
+      display: block;                   /*688px hole blog er lekha niche asbe*/
+  }                          
+   }
+  
